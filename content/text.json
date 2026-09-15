@@ -1,0 +1,89 @@
+{
+  "site": {
+    "name": "Past Nine",
+    "url": "https://pastnine.co.nz",
+    "titleTemplate": "%s — Past Nine",
+    "defaultTitle": "Past Nine — creative developer, Wellington NZ",
+    "description": "Past Nine is the studio of a Wellington-based web developer designing and building custom websites for small businesses.",
+    "logo": {
+      "navy": "/img/logo-navy.png",
+      "white": "/img/logo-white.png",
+      "navyMark": "/img/logo-navy-mark.png",
+      "whiteMark": "/img/logo-white-mark.png",
+      "markWidth": 446,
+      "markHeight": 198
+    }
+  },
+  "pages": {
+    "home": {
+      "path": "/",
+      "title": "Past Nine — creative developer, Wellington NZ",
+      "description": "Past Nine is the studio of a Wellington-based web developer designing and building custom websites for small businesses.",
+      "hero": {
+        "logoAlt": "Past Nine",
+        "heading": "Custom websites, built properly.",
+        "body": "I'm a Wellington-based developer designing and building fast, considered sites for people who want it done right — no templates, no shortcuts.",
+        "backgroundImage": "/img/pn-hero-bg2.jpg",
+        "backgroundImageAlt": ""
+      },
+      "why": {
+        "heading": "Why work with a developer in 2026?",
+        "intro": "AI can spin up a site in minutes. Here's what it still can't do.",
+        "bullets": [
+          "A site built around your business, not a template forced to fit it.",
+          "Code you own outright — no subscription, no lock-in.",
+          "Fast, accessible, and built to actually rank — not just look good in a demo.",
+          "A real person to call when something needs to change.",
+          "Someone who sticks around after launch, not just for the sale."
+        ]
+      }
+    },
+    "about": {
+      "path": "/about",
+      "title": "About",
+      "description": "Wellington web developer with a lifelong eye for design, now building websites for local businesses.",
+      "heading": "About me",
+      "photo": "/img/gemma-headshot.jpg",
+      "photoAlt": "Gemma, the developer behind Past Nine",
+      "paragraphs": [
+        "I'm Gemma — three years into building websites professionally, but I've had an eye for design since my Bebo days, endlessly tweaking layouts and profile skins.",
+        "Before code, I ran social media for local sports teams, learning how to grab attention and tell a story people actually stop for.",
+        "These days I build for small, local businesses — because a considered web presence shouldn't be reserved for the big guys."
+      ]
+    }
+  },
+  "footer": {
+    "location": "Based in Wellington — working with clients across NZ.",
+    "ctaText": "Want to know more? Get in touch",
+    "ctaHref": "/contact",
+    "copyright": "Past Nine. All rights reserved."
+  },
+  "banner": {
+    "enabled": true,
+    "text": "Portfolio-building offer: reduced rates for my first clients."
+  },
+  "nav": {
+    "links": [
+      {
+        "label": "HOME",
+        "href": "/"
+      },
+      {
+        "label": "ABOUT",
+        "href": "/about"
+      },
+      {
+        "label": "WORK",
+        "href": "/work"
+      },
+      {
+        "label": "SERVICES",
+        "href": "/services"
+      },
+      {
+        "label": "CONTACT",
+        "href": "/contact"
+      }
+    ]
+  }
+}

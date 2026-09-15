@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
 :root {
+  /* Light / primary — white-dominant pages */
+  --color-ink: #011227;
+  --color-ink-secondary: #3d4a5c;
+  --color-ink-muted: #7a8492;
+  --color-hairline: #d9dee4;
+
+  /* Dark accents — hero and other dark-background sections */
+  --color-paper-on-dark: #ffffff;
+  --color-secondary-on-dark: #b8c4d6;
+  --color-dim-on-dark: #5a7096;
+
+  /* Promo banner — deliberately outside the core palette, easy to swap later */
+  --color-neon: #39ff14;
+
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: var(--color-ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--color-ink);
+  --color-ink-secondary: var(--color-ink-secondary);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-hairline: var(--color-hairline);
+  --color-paper-on-dark: var(--color-paper-on-dark);
+  --color-secondary-on-dark: var(--color-secondary-on-dark);
+  --color-dim-on-dark: var(--color-dim-on-dark);
+  --color-neon: var(--color-neon);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-space-grotesk);
+  --animate-marquee: marquee 26s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.hero-img {
+  -webkit-mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 9%, transparent 100%);
+  mask-image: linear-gradient(to bottom, rgb(255, 255, 255) 92%, transparent 100%);
 }
