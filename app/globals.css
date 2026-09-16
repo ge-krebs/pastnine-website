@@ -12,8 +12,9 @@
   --color-secondary-on-dark: #b8c4d6;
   --color-dim-on-dark: #5a7096;
 
-  /* Promo banner — deliberately outside the core palette, easy to swap later */
-  --color-neon: #39ff14;
+  /* Accent — pulled from the hero art, replaces the placeholder neon */
+  --color-accent: #8b3d31;       /* rust/burgundy — the ribbon's top edge */
+  --color-accent-muted: #754460; /* mauve — the shadowed fold, for hover/lighter states */
 
   --background: #ffffff;
   --foreground: var(--color-ink);
@@ -29,7 +30,8 @@
   --color-paper-on-dark: var(--color-paper-on-dark);
   --color-secondary-on-dark: var(--color-secondary-on-dark);
   --color-dim-on-dark: var(--color-dim-on-dark);
-  --color-neon: var(--color-neon);
+  --color-accent: var(--color-accent);
+  --color-accent-muted: var(--color-accent-muted);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-space-grotesk);
   --animate-marquee: marquee 26s linear infinite;

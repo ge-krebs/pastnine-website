@@ -23,7 +23,7 @@
         "logoAlt": "Past Nine",
         "heading": "Custom websites, built properly.",
         "body": "I'm a Wellington-based developer designing and building fast, considered sites for people who want it done right — no templates, no shortcuts.",
-        "backgroundImage": "/img/pn-hero-bg2.jpg",
+        "backgroundImage": "/img/hero-test.jpg",
         "backgroundImageAlt": ""
       },
       "why": {
@@ -36,6 +36,26 @@
           "A real person to call when something needs to change.",
           "Someone who sticks around after launch, not just for the sale."
         ]
+      },
+      "help": {
+        "heading": "How I can help",
+        "subtitle": "A few ways to get started — pick the level of involvement that suits you.",
+        "items": [
+          {
+            "title": "Full website design",
+            "description": "Let me handle it — I design, build, and launch the whole site for you."
+          },
+          {
+            "title": "Custom design",
+            "description": "I'll work with you — bring your ideas and we build it together."
+          },
+          {
+            "title": "SEO & Google Business",
+            "description": "Get found locally, with search optimisation and your Google Business profile set up properly."
+          }
+        ],
+        "ctaText": "See my full services",
+        "ctaHref": "/services"
       }
     },
     "about": {
@@ -43,13 +63,42 @@
       "title": "About",
       "description": "Wellington web developer with a lifelong eye for design, now building websites for local businesses.",
       "heading": "About me",
-      "photo": "/img/gemma-headshot.jpg",
+      "photo": "/img/gemma.jpg",
       "photoAlt": "Gemma, the developer behind Past Nine",
       "paragraphs": [
-        "I'm Gemma — three years into building websites professionally, but I've had an eye for design since my Bebo days, endlessly tweaking layouts and profile skins.",
-        "Before code, I ran social media for local sports teams, learning how to grab attention and tell a story people actually stop for.",
-        "These days I build for small, local businesses — because a considered web presence shouldn't be reserved for the big guys."
-      ]
+       "I'm Gemma, the developer behind Past Nine — a one-woman web studio building fast, clean sites and web apps with Next.js, Tailwind, and TypeScript.",
+        "I work directly with clients, end to end — from first idea through to a site that's fast, well-built, and actually easy to maintain. No handoffs, no account managers, just one person who cares about getting it right.",
+        "Based in New Zealand, working with clients wherever they are."      ],
+      "cta": {
+        "heading": "Got a project in mind?",
+        "text": "Tell me what you're building — I'll let you know honestly if I'm the right fit.",
+        "buttonLabel": "Get in touch"
+      }
+    },
+    "contact": {
+      "path": "/contact",
+      "title": "Contact",
+      "description": "Get in touch with Past Nine to talk about your next website project.",
+      "heading": "Hello!",
+      "tagline": "Want to work together? Get in touch and let's talk about your project.",
+      "backgroundImage": "/img/pn-hero-bg.jpg",
+      "backgroundImageAlt": "",
+      "form": {
+        "heading": "Send a message",
+        "nameLabel": "Name",
+        "emailLabel": "Email",
+        "phoneLabel": "Phone (optional)",
+        "messageLabel": "Message",
+        "submitLabel": "Send message"
+      },
+      "direct": {
+        "heading": "Prefer to reach out directly?",
+        "intro": "Email or call — whichever's easier.",
+        "phoneLabel": "Phone",
+        "phoneValue": "TBC",
+        "emailLabel": "Email",
+        "emailValue": "TBC"
+      }
     }
   },
   "footer": {

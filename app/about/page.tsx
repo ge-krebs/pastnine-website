@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import AboutCta from "@/components/AboutCta";
 import text from "@/content/text.json";
 
 const { about } = text.pages;
@@ -42,34 +43,49 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
       />
       <main>
-        <section className="flex min-h-[100svh] w-full flex-col items-center justify-center gap-12 bg-white px-6 pb-16 pt-36 sm:px-10 md:flex-row md:gap-16 md:pt-32 lg:gap-24">
-          <div className="shrink-0">
-            <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-dim-on-dark sm:h-56 sm:w-56 md:h-64 md:w-64 lg:h-72 lg:w-72">
-              <Image
-                src={about.photo}
-                alt={about.photoAlt}
-                fill
-                priority
-                sizes="(min-width: 1024px) 18rem, (min-width: 768px) 16rem, (min-width: 640px) 14rem, 12rem"
-                className="object-cover object-[50%_20%]"
-              />
-            </div>
-          </div>
+        <section className="relative w-full overflow-hidden bg-white px-6 pb-24 pt-36 sm:px-10 md:pt-32">
+          <Image
+            src="/img/wave-light.png"
+            alt=""
+            aria-hidden
+            fill
+            sizes="100vw"
+            className="absolute inset-0 z-0 object-cover opacity-20"
+          />
 
-          <div className="flex max-w-lg flex-col items-center gap-6 text-center md:items-start md:text-left">
-            <h1 className="font-heading text-5xl font-bold leading-tight text-ink sm:text-6xl">
-              {about.heading}
-            </h1>
-            <div className="flex flex-col gap-4">
-              {about.paragraphs.map((paragraph) => (
-                <p
-                  key={paragraph}
-                  className="text-pretty text-base leading-relaxed text-ink-secondary sm:text-lg"
-                >
-                  {paragraph}
-                </p>
-              ))}
+          <div className="relative z-10 mx-auto flex max-w-5xl flex-col gap-16 lg:gap-20">
+            <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:gap-16 lg:gap-20">
+              <div className="flex w-full flex-col items-center gap-6 text-center md:w-1/2 md:items-start md:text-left">
+                <h1 className="max-w-lg font-heading text-5xl font-bold leading-tight text-ink sm:text-6xl">
+                  {about.heading}
+                </h1>
+                <div className="flex max-w-lg flex-col gap-4">
+                  {about.paragraphs.map((paragraph) => (
+                    <p
+                      key={paragraph}
+                      className="text-pretty text-base leading-relaxed text-ink-secondary sm:text-lg"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="w-full max-w-xs shrink-0 sm:max-w-sm md:w-2/5">
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl">
+                  <Image
+                    src={about.photo}
+                    alt={about.photoAlt}
+                    fill
+                    priority
+                    sizes="(min-width: 640px) 24rem, 80vw"
+                    className="object-cover object-[50%_20%]"
+                  />
+                </div>
+              </div>
             </div>
+
+            <AboutCta />
           </div>
         </section>
       </main>

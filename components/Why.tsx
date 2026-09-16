@@ -65,50 +65,54 @@ export default function Why() {
     <section
       ref={sectionRef}
       aria-label="Why work with a developer"
-      className="w-full bg-white px-6 py-24 sm:px-10 sm:py-32"
+      className="w-full bg-white px-6 py-12 sm:px-10 sm:py-16"
     >
-      <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
-        <h2 className="max-w-2xl font-heading text-3xl font-medium leading-tight text-ink sm:text-4xl">
-          {reducedMotion ? why.heading : why.heading.slice(0, charCount)}
-          {!reducedMotion && !typingDone && (
-            <span
-              aria-hidden
-              className="ml-1 inline-block h-[0.8em] w-[2px] translate-y-[0.15em] animate-pulse bg-ink"
-            />
-          )}
-        </h2>
+      <div className="mx-auto flex max-w-5xl flex-col overflow-hidden rounded-3xl lg:flex-row lg:items-stretch">
+        <div className="flex flex-col items-center justify-center gap-4 bg-white px-8 py-10 text-center lg:w-1/2 lg:items-start lg:px-14 lg:py-12 lg:text-left">
+          <h2 className="max-w-md font-heading text-3xl font-medium leading-tight text-ink sm:text-4xl">
+            {reducedMotion ? why.heading : why.heading.slice(0, charCount)}
+            {!reducedMotion && !typingDone && (
+              <span
+                aria-hidden
+                className="ml-1 inline-block h-[0.8em] w-[2px] translate-y-[0.15em] animate-pulse bg-ink"
+              />
+            )}
+          </h2>
 
-        <motion.p
-          className="mt-5 max-w-md text-pretty text-base leading-relaxed text-ink-secondary sm:text-lg"
-          initial={reducedMotion ? false : { opacity: 0, y: 8 }}
-          whileInView={reducedMotion ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: paragraphDelay }}
-        >
-          {why.intro}
-        </motion.p>
+          <motion.p
+            className="max-w-sm text-pretty text-base leading-relaxed text-ink-secondary sm:text-lg"
+            initial={reducedMotion ? false : { opacity: 0, y: 8 }}
+            whileInView={reducedMotion ? undefined : { opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: paragraphDelay }}
+          >
+            {why.intro}
+          </motion.p>
+        </div>
 
-        <ul className="mt-10 flex w-full max-w-xl flex-col gap-5 text-left sm:mt-12">
-          {why.bullets.map((bullet, index) => (
-            <motion.li
-              key={bullet}
-              className="flex items-start gap-3"
-              initial={reducedMotion ? false : { opacity: 0, y: 12 }}
-              whileInView={reducedMotion ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{
-                duration: 0.5,
-                ease: "easeOut",
-                delay: (BULLET_START_DELAY_MS + index * BULLET_STAGGER_MS) / 1000,
-              }}
-            >
-              <CheckIcon />
-              <span className="pt-0.5 text-base leading-relaxed text-ink-secondary sm:text-lg">
-                {bullet}
-              </span>
-            </motion.li>
-          ))}
-        </ul>
+        <div className="flex flex-col items-center justify-center bg-white px-8 py-10 lg:w-1/2 lg:items-start lg:border-l lg:border-hairline lg:px-14 lg:py-12">
+          <ul className="flex w-full max-w-md flex-col gap-5 text-left">
+            {why.bullets.map((bullet, index) => (
+              <motion.li
+                key={bullet}
+                className="flex items-start gap-3"
+                initial={reducedMotion ? false : { opacity: 0, y: 12 }}
+                whileInView={reducedMotion ? undefined : { opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                  delay: (BULLET_START_DELAY_MS + index * BULLET_STAGGER_MS) / 1000,
+                }}
+              >
+                <CheckIcon />
+                <span className="pt-0.5 text-base leading-relaxed text-ink-secondary sm:text-lg">
+                  {bullet}
+                </span>
+              </motion.li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
